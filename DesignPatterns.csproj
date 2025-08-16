@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>DesignPatterns.Adapter.Program</StartupObject>
+    <StartupObject>DesignPatterns.Factory.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -54,6 +54,9 @@
     <Compile Include="Adapter\Program.cs" />
     <Compile Include="Adapter\ThirdPartyLogger.cs" />
     <Compile Include="Factory.cs" />
+    <Compile Include="Factory\VehicleFactory.cs" />
+    <Compile Include="Factory\Vehicle.cs" />
+    <Compile Include="Factory\Program.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Singleton\Program.cs" />
