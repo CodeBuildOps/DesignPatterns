@@ -1,18 +1,15 @@
-﻿namespace DesignPatterns
+﻿namespace DesignPatterns.Singleton
 {
-    class Singleton
+    /// <summary>
+    /// The Singleton class ensures that only one instance of the class is created and provides a global point of access to that instance.
+    /// Key Points:
+    /// - Private constructor to prevent instantiation from outside this class.
+    /// - A static field to store the single instance.
+    /// - Thread-safety ensured using 'lock' (double-checked locking).
+    /// - Lazy initialization: instance is created only when first accessed.
+    /// </summary>
+    internal class Singleton
     {
-        /// <summary>
-        /// The Singleton class ensures that only one instance of the class is created
-        /// and provides a global point of access to that instance.
-        ///
-        /// Key Points:
-        /// - Private constructor to prevent instantiation from outside this class.
-        /// - A static field to store the single instance.
-        /// - Thread-safety ensured using 'lock' (double-checked locking).
-        /// - Lazy initialization: instance is created only when first accessed.
-        /// </summary>
-        ///
         private Singleton() { }
 
         // Holds the single instance of the Singleton class.

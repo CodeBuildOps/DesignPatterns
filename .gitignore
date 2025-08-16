@@ -1,5 +1,5 @@
-*.vscode/
+*vscode/
 *bin/
 *obj/
-*.out/
-*.vs/
+*out/
+*vs/
