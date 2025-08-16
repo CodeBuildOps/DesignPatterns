@@ -5,28 +5,15 @@
         static void Main(string[] args)
         {
             // Normally without any pattern, we might do something like the below one,
-            // The client code directly depends on concrete classes(Car, Bike, Truck)
+            // The client code directly depends on concrete classes(VegPizza, NonVegPizza)
 
-            //Car car = new Car();
-            //car.Drive();
+            // Client uses Factory instead of new, and only knows about IPizza, not about concrete classes
 
-            //Bike bike = new Bike();
-            //bike.Drive();
+            IPizza pizza = ProductFactory.GetPizza("Veg");
+            pizza.Eat();
 
-            //Truck truck = new Truck();
-            //truck.Drive();
-
-
-            // Client uses Factory instead of new, and only knows about IVehicle, not about concrete classes
-
-            IVehicle car = VehicleFactory.GetVehicle("car");
-            car.Drive();
-
-            IVehicle bike = VehicleFactory.GetVehicle("bike");
-            bike.Drive();
-
-            IVehicle truck = VehicleFactory.GetVehicle("truck");
-            truck.Drive();
+            pizza = ProductFactory.GetPizza("Non");
+            pizza.Eat();
         }
     }
 }
